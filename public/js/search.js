@@ -1,5 +1,5 @@
 // search.js — fixed & robust version
-
+// Detect base URL automatically (for local or production)
 function encodeHTML(str) {
   return String(str).replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
@@ -58,7 +58,10 @@ async function performSearch(evt) {
   }
 
   try {
-    const response = await fetch("/index.json");
+    const langPrefix = window.location.pathname.split('/')[1];
+    const jsonPath = ['en', 'vi'].includes(langPrefix) ? `/${langPrefix}/index.json` : '/index.json';
+    const response = await fetch(jsonPath);
+
     if (!response.ok) throw new Error("Failed to fetch /index.json: " + response.status);
     const searchJson = await response.json();
     console.log("Fetched Data:", searchJson);
