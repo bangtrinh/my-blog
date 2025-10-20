@@ -1,0 +1,66 @@
+# English translations
+- id: "home"
+  translation: "Home"
+
+- id: "about"
+  translation: "About"
+
+- id: "projects"
+  translation: "Projects"
+
+- id: "education"
+  translation: "Education"
+
+- id: "achievements"
+  translation: "Achievements"
+
+- id: "blog"
+  translation: "Blog"
+
+- id: "contact"
+  translation: "Contact"
+
+- id: "readMore"
+  translation: "Read More"
+
+- id: "viewAll"
+  translation: "View All"
+
+- id: "recentPosts"
+  translation: "Recent Posts"
+
+- id: "getInTouch"
+  translation: "Get in Touch"
+
+- id: "sendEmail"
+  translation: "Send Email"
+
+- id: "resume"
+  translation: "Resume"
+
+- id: "download"
+  translation: "Download"
+
+- id: "skills"
+  translation: "Skills"
+
+- id: "experience"
+  translation: "Experience"
+
+- id: "services"
+  translation: "Services"
+
+- id: "tableOfContents"
+  translation: "Table of Contents"
+
+- id: "tags"
+  translation: "Tags"
+
+- id: "socialShare"
+  translation: "Social Share"
+
+- id: "minRead"
+  translation: "min read"
+
+  recent_posts_title:
+  other: "Recent Posts"

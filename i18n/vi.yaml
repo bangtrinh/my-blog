@@ -1,0 +1,66 @@
+# Vietnamese translations
+- id: "home"
+  translation: "Trang chủ"
+
+- id: "about"
+  translation: "Giới thiệu"
+
+- id: "projects" 
+  translation: "Dự án"
+
+- id: "education"
+  translation: "Học vấn"
+
+- id: "achievements"
+  translation: "Thành tích"
+
+- id: "blog"
+  translation: "Blog"
+
+- id: "contact"
+  translation: "Liên hệ"
+
+- id: "readMore"
+  translation: "Đọc tiếp"
+
+- id: "viewAll"
+  translation: "Xem tất cả"
+
+- id: "recentPosts"
+  translation: "Bài viết mới nhất"
+
+- id: "getInTouch"
+  translation: "Liên hệ với tôi"
+
+- id: "sendEmail"
+  translation: "Gửi Email"
+
+- id: "resume"
+  translation: "Hồ sơ"
+
+- id: "download"
+  translation: "Tải về"
+
+- id: "skills"
+  translation: "Kỹ năng"
+
+- id: "experience"
+  translation: "Kinh nghiệm"
+
+- id: "services"
+  translation: "Dịch vụ"
+
+- id: "tableOfContents"
+  translation: "Mục lục"
+
+- id: "tags"
+  translation: "Thẻ"
+
+- id: "socialShare"
+  translation: "Chia sẻ"
+
+- id: "minRead"
+  translation: "phút đọc"
+  
+  recent_posts_title:
+  other: "Bài Viết Mới Nhất"

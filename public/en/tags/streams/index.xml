@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streams on Bang Trinh - Developer</title>
+    <link>http://localhost:1313/en/tags/streams/</link>
+    <description>Recent content in Streams on Bang Trinh - Developer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Oct 2025 16:00:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/tags/streams/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java Streams Made Easy</title>
+      <link>http://localhost:1313/en/blogs/java-streams-made-easy/</link>
+      <pubDate>Mon, 20 Oct 2025 16:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/en/blogs/java-streams-made-easy/</guid>
+      <description>&lt;p&gt;Java Streams allow you to manipulate collections easily and efficiently.&lt;/p&gt;&#xA;&lt;h2 id=&#34;stream-basics&#34;&gt;Stream Basics&lt;/h2&gt;&#xA;&lt;p&gt;Bạn có thể tạo Stream từ List, Set, hoặc Arrays:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Arrays.&lt;span style=&#34;color:#a6e22e&#34;&gt;asList&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bob&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Charlie&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;names.&lt;span style=&#34;color:#a6e22e&#34;&gt;stream&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     .&lt;span style=&#34;color:#a6e22e&#34;&gt;filter&lt;/span&gt;(name &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; name.&lt;span style=&#34;color:#a6e22e&#34;&gt;startsWith&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;))&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     .&lt;span style=&#34;color:#a6e22e&#34;&gt;forEach&lt;/span&gt;(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;::println);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;tip&#34;&gt;Tip&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;map()&lt;/code&gt; to transform data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;filter()&lt;/code&gt; to filter data.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;collect()&lt;/code&gt;to gather the results.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Streams help write concise code, but remember lazy evaluation and avoid side effects.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
