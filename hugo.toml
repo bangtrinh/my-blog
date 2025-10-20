@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313"
+baseURL = "https://bangtrinh.github.io/my-blog/"
 languageCode = "vi"
 theme = "hugo-profile"
 defaultContentLanguage = "vi"
