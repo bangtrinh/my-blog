@@ -3,53 +3,53 @@
     "title": "Java Exception Handling Tips",
     "description": "How to handle exceptions in Java effectively.",
     "content": "Exception handling makes your code stable and easier to debug.\nExample try { int result = 10 / 0; } catch(ArithmeticException e) { System.out.println(\u0026#34;Cannot divide by zero!\u0026#34;); } finally { System.out.println(\u0026#34;Always executed\u0026#34;); } Tip Use try-with-resources for AutoCloseable resources. Do not catch generic Exception unless absolutely necessary. N.B. Good exception management keeps your application stable and easy to maintain.\n",
-    "permalink": "http://localhost:1313/en/blogs/java-exception-handling-tips/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/java-exception-handling-tips/"
   },{
     "id": "7b6e4eabdb7627212a18dc446ef11073",
     "title": "JavaScript Modules Explained",
     "description": "Learn how to organize your code using ES6 modules in JavaScript.",
     "content": "Modules help split your code into reusable files.\nExample math.js\nexport function add(a, b) { return a + b; } export function sub(a, b) { return a - b; } app.js\nimport { add } from \u0026#39;./math.js\u0026#39;; console.log(add(2,3)); // 5 N.B. Modules help prevent global scope pollution and improve maintainability.\n",
-    "permalink": "http://localhost:1313/en/blogs/javascript-modules-explained/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/javascript-modules-explained/"
   },{
     "id": "32b68db35bd7d934080059ac862c845b",
     "title": "Functional Programming in Java",
     "description": "Leverage lambda and streams to write code in a functional style in Java.",
     "content": "From Java 8 onwards, functional programming is supported with lambda and streams.\nExample List\u0026lt;Integer\u0026gt; numbers = Arrays.asList(1, 2, 3, 4); numbers.stream() .map(n -\u0026gt; n * n) .forEach(System.out::println); Tip map, filter, reduce are important functions. Makes code cleaner, easier to test and maintain. N.B. Functional programming in Java make code modular and readable.\n",
-    "permalink": "http://localhost:1313/en/blogs/functional-programming-in-java/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/functional-programming-in-java/"
   },{
     "id": "74efcf16644a977e2cfd458290868463",
     "title": "JavaScript Event Loop Demystified",
     "description": "Understand the event loop mechanism to handle async code in JavaScript.",
     "content": "The Event Loop is the heart of the JS runtime.\nHow it Works Call Stack: Nơi lưu function đang chạy. Message Queue: Nơi lưu callback. Event Loop: Kiểm tra stack rỗng để xử lý queue. console.log(\u0026#39;Start\u0026#39;); setTimeout(() =\u0026gt; console.log(\u0026#39;Timeout\u0026#39;), 0); console.log(\u0026#39;End\u0026#39;); Output Start End Timeout N.B. Understanding the event loop makes debugging async code and promise chaining easier.\n",
-    "permalink": "http://localhost:1313/en/blogs/javascript-event-loop-demystified/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/javascript-event-loop-demystified/"
   },{
     "id": "df97d1a0a158da5a6efefd9c4c6ff34d",
     "title": "Java 17 Features You Must Know",
     "description": "Exciting new features in Java 17 you should try.",
     "content": "Java 17 brings many useful improvements.\nHighlights Sealed Classes: Giới hạn class con. Records: Data class ngắn gọn. Pattern Matching for switch: Dễ đọc hơn. record Point(int x, int y) {} Point p = new Point(1, 2); System.out.println(p.x()); N.B. Upgrade to Java 17 to take advantage of modern features and optimize your code.\n",
-    "permalink": "http://localhost:1313/en/blogs/java-17-features-you-must-know/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/java-17-features-you-must-know/"
   },{
     "id": "61e8bf871369760f83cc98368fcd5daf",
     "title": "Async/Await in JavaScript",
     "description": "Learn how to handle asynchronous code in JavaScript easily with async/await.",
     "content": "Async/Await lets you write asynchronous code that looks synchronous.\nExample async function fetchData() { try { let response = await fetch(\u0026#39;https://api.example.com/data\u0026#39;); let data = await response.json(); console.log(data); } catch(err) { console.error(err); } } fetchData(); Tip Always use try/catch for error handling. await chỉ dùng trong async function. N.B. Async/await helps avoid callback hell and makes the code more readable.\n",
-    "permalink": "http://localhost:1313/en/blogs/async-await-in-javascript/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/async-await-in-javascript/"
   },{
     "id": "652fd29f548a2b7f1e4e83d144ff6282",
     "title": "Java Generics Explained",
     "description": "Learn about generics and how they make your code safer.",
     "content": "Generics make Java code type-safe and easier to maintain.\nWhy Use Generics? List\u0026lt;String\u0026gt; names = new ArrayList\u0026lt;\u0026gt;(); names.add(\u0026#34;Alice\u0026#34;); // names.add(10); // Lỗi biên dịch! Tip Use for classes or methods. Helps avoid manual casting. N.B. Generics improve type-safety but cannot be used directly with primitive types.\n",
-    "permalink": "http://localhost:1313/en/blogs/java-generics-explained/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/java-generics-explained/"
   },{
     "id": "23382e62e85fdd719de9498ce056b97f",
     "title": "Understanding JavaScript Closures",
     "description": "Discover the power of closures in JavaScript.",
     "content": "Closures are one of the most powerful concepts in JavaScript.\nWhat is a Closure? Closure là khi một function nhớ được scope bên ngoài nó ngay cả khi function đó được gọi ở nơi khác:\nfunction makeCounter() { let count = 0; return function() { count++; return count; } } const counter = makeCounter(); console.log(counter()); // 1 console.log(counter()); // 2 Tip Use closures to create private variables. Avoid overusing closures inside loops to prevent memory leaks. N.B. Closures are the key to understanding many JS patterns such as modules or callbacks.\n",
-    "permalink": "http://localhost:1313/en/blogs/understanding-javascript-closures/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/understanding-javascript-closures/"
   },{
     "id": "1d5ce009eccfc66b82779bd5a3704163",
     "title": "Java Streams Made Easy",
     "description": "Learn how to use Java Streams to process data easily.",
     "content": "Java Streams allow you to manipulate collections easily and efficiently.\nStream Basics Bạn có thể tạo Stream từ List, Set, hoặc Arrays:\nList\u0026lt;String\u0026gt; names = Arrays.asList(\u0026#34;Alice\u0026#34;, \u0026#34;Bob\u0026#34;, \u0026#34;Charlie\u0026#34;); names.stream() .filter(name -\u0026gt; name.startsWith(\u0026#34;A\u0026#34;)) .forEach(System.out::println); Tip map() to transform data. filter() to filter data. collect()to gather the results. N.B. Streams help write concise code, but remember lazy evaluation and avoid side effects.\n",
-    "permalink": "http://localhost:1313/en/blogs/java-streams-made-easy/"
+    "permalink": "https://bangtrinh.github.io/my-blog/en/blogs/java-streams-made-easy/"
   }]

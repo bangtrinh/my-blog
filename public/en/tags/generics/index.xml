@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Generics on Bang Trinh - Developer</title>
-    <link>http://localhost:1313/en/tags/generics/</link>
+    <link>https://bangtrinh.github.io/my-blog/en/tags/generics/</link>
     <description>Recent content in Generics on Bang Trinh - Developer</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 Oct 2025 16:20:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/en/tags/generics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bangtrinh.github.io/my-blog/en/tags/generics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java Generics Explained</title>
-      <link>http://localhost:1313/en/blogs/java-generics-explained/</link>
+      <link>https://bangtrinh.github.io/my-blog/en/blogs/java-generics-explained/</link>
       <pubDate>Mon, 20 Oct 2025 16:20:00 +0700</pubDate>
-      <guid>http://localhost:1313/en/blogs/java-generics-explained/</guid>
+      <guid>https://bangtrinh.github.io/my-blog/en/blogs/java-generics-explained/</guid>
       <description>&lt;p&gt;Generics make Java code type-safe and easier to maintain.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-use-generics&#34;&gt;Why Use Generics?&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;names.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// names.add(10); // Lỗi biên dịch!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;tip&#34;&gt;Tip&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Use &lt;!-- raw HTML omitted --&gt; for classes or methods.&lt;/li&gt;&#xA;&lt;li&gt;Helps avoid manual casting.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Generics improve type-safety but cannot be used directly with primitive types.&lt;/p&gt;</description>
     </item>
   </channel>
