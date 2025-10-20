@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rich Content on Băng Trinh - Developer</title>
+    <link>http://localhost:1313/tags/rich-content/</link>
+    <description>Recent content in Rich Content on Băng Trinh - Developer</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Sat, 03 Apr 2021 19:53:33 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/rich-content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rich Content</title>
+      <link>http://localhost:1313/blogs/rich-content/</link>
+      <pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
+      <guid>http://localhost:1313/blogs/rich-content/</guid>
+      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#embedded&#34;&gt;Embedded Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/privacy/#configuration&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;&#xA;&lt;h2 id=&#34;x-simple-shortcode&#34;&gt;X Simple Shortcode&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; tweet user=&amp;#34;GoHugoIO&amp;#34; id=&amp;#34;1315233626070503424&amp;#34; &amp;gt;}}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;vimeo-simple-shortcode&#34;&gt;Vimeo Simple Shortcode&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; vimeo 146022717 &amp;gt;}}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;youtube-simple-shortcode&#34;&gt;Youtube Simple Shortcode&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;{{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;theme-custom-shortcodes&#34;&gt;Theme Custom Shortcodes&lt;/h2&gt;&#xA;&lt;p&gt;These shortcodes are not Hugo built-ins, but are provided by the theme.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

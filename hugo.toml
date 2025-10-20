@@ -1,4 +1,443 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'hugo-profile'
+baseURL = "http://localhost:1313/"
+languageCode = "vi"
+theme = "hugo-profile"
+defaultContentLanguage = "vi"
+defaultContentLanguageInSubdir = true
+
+[pagination]
+pagerSize = 6
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS", "JSON"]
+
+[languages]
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    weight = 1
+    title = "Băng Trinh - Developer"
+    contentDir = "content/vi"
+    
+    [languages.vi.params]
+      name = "Băng Trinh"
+      designation = "Lập Trình Viên Fullstack"
+      description = "Chuyên Java, JavaScript & Lập trình mạng"
+      email = "bangtrinh.nn@gmail.com"
+      mobile = "+84 346 624 592"
+      location = "Hồ Chí Minh, Việt Nam"
+      
+      [languages.vi.params.hero]
+        enable = true
+        intro = "Xin chào, tôi là"
+        title = "Băng Trinh."
+        subtitle = "Lập trình viên năng động."
+        content = "Với kinh nghiệm phát triển đa dạng từ ứng dụng web đến mobile, tôi đã thành thạo nhiều công nghệ với mục tiêu mang lại giải pháp hiệu quả cho doanh nghiệp."
+        image = "/images/avatar.jpg"
+        roundImage = false
+        
+        [languages.vi.params.hero.button]
+          enable = true
+          name = "Hồ sơ"
+          url = "/resume.pdf"
+          download = false
+          newPage = true
+
+      [languages.vi.params.about]
+        enable = true
+        title = "Giới thiệu"
+        subtitle = "Về tôi và công việc"
+        image = "/images/avatar.jpg"
+        content = """
+Tôi là một lập trình viên đam mê phát triển ứng dụng web, với nền tảng vững chắc về lập trình và luôn hướng tới việc kết hợp công nghệ với sự sáng tạo. Hiện tôi đang theo học chương trình Kỹ sư Công nghệ Thông tin tại Đại học Công nghệ TP.HCM.
+
+Tôi tập trung xây dựng các ứng dụng web sử dụng Java Spring Boot, JavaScript và chia sẻ kiến thức thông qua blog cá nhân.
+
+Các công nghệ tôi đang làm việc bao gồm:
+
+- Java & Spring Boot
+- Dart & Flutter
+- JavaScript & Node.js
+- React & Express
+- MySQL & SQLServer
+- Docker & Git
+"""
+
+      [languages.vi.params.education]
+        enable = true
+        title = "Học Vấn"
+        index = false
+
+        [[languages.vi.params.education.items]]
+          title = "Kỹ sư Công nghệ Thông tin"
+          date = "2022 - Hiện tại"
+          school = { name = "Đại học Công nghệ TP.HCM", url = "https://www.hutech.edu.vn" }
+          GPA = "3.65/4.0"
+          content = """
+Chuyên ngành: **Công nghệ phần mềm**
+
+**Thành tích:**
+- Giải khuyến khích Ươm mầm tài năng HUTECH năm học 2022 - 2023
+- Top 10 HUTECH Code War
+- Sinh viên đạt thành tích nghiên cứu khoa học năm học 2023 - 2024
+"""
+        [[languages.vi.params.education.items]]
+          title = "Trung học phổ thông"
+          date = "2018 - 2021"
+          school = { name = "Trường THPT Số 2 Nguyễn Bỉnh Khiêm", url = "https://thptnguyenbinhkhiem.gialai.edu.vn" }
+          content = """
+**Thành tích:**
+- Giải nhì Hội thi tin học trẻ Tỉnh Gia Lai 2020
+"""
+
+      [languages.vi.params.projects]
+        enable = true
+        title = "Dự Án"
+
+        [[languages.vi.params.projects.items]]
+          title = "Phương pháp khai phá tập dữ liệu hiệu quả cao đa cấp"
+          image = "/images/projects/datamining.png"
+          badges = ["Java"]
+          content = "Phát triển các thuật toán khai phá dữ liệu để khám phá các tập mục có hiệu quả cao ở nhiều cấp độ trong cơ sở dữ liệu phân cấp, cùng với các kỹ thuật nhằm cải thiện hiệu suất khai thác."
+          
+          [[languages.vi.params.projects.items.links]]
+            icon = "fas fa-external-link-alt"
+            url = "https://link.springer.com/chapter/10.1007/978-3-031-92545-0_45"
+
+        [[languages.vi.params.projects.items]]
+          title = "Smart Home"
+          image = "/images/projects/smarthome.png"
+          badges = ["Java", "Spring Boot", "MySQL", "JWT", "ESP-IDF"]
+          content = "Trang web quản lý và điều khiển thiết bị điện tử trong hộ gia đình và thiết bị được cài đặt để nhận lệnh điều khiển."
+          
+          [[languages.vi.params.projects.items.links]]
+            icon = "fab fa-github"
+            url = "https://github.com/bangtrinh/smart-home"
+
+        [[languages.vi.params.projects.items]]
+          title = "Wallet App"
+          image = "/images/projects/walletapp.png"
+          badges = ["Node.js", "Flutter", "Dart", "JavaScript"]
+          content = "Ứng dụng cho phép giả lập giao dịch, tạo nguồn tiền chung giữa các người dùng, quản lý chi tiêu, lập kế hoạch chi tiêu với sự hỗ trợ của AI."
+          
+          [[languages.vi.params.projects.items.links]]
+            icon = "fab fa-github"
+            url = "https://github.com/bangtrinh/cnpm"
+
+      [languages.vi.params.achievements]
+        enable = true
+        title = "Chứng chỉ & Thành tựu"
+
+        [[languages.vi.params.achievements.items]]
+          title = "Bài báo khoa học tại hội nghị khoa học RTIS"
+          image = "/images/achievements/nckh.png"
+          url = "https://link.springer.com/chapter/10.1007/978-3-031-92545-0_45"
+          content = "Công bố bài báo khoa học thuộc lĩnh vực Data Mining tại hội nghị RTIS."
+
+        [[languages.vi.params.achievements.items]]
+          title = "Chứng chỉ Tiếng Anh B1 HUTECH"
+          image = "/images/achievements/english.png"
+          content = "Sở hữu chứng chỉ Tiếng Anh B1, chứng minh khả năng giao tiếp và làm việc hiệu quả trong môi trường quốc tế."
+
+        [[languages.vi.params.achievements.items]]
+          title = "Top 10 - HUTECH Code War 2023"
+          image = "/images/achievements/codewar.jpg"
+          url = "https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14610686-lo-dien-dan-lap-trinh-vien-xuat-sac-tai-chung-ket-cuoc-thi-hutech-code-war-2023"
+          content = "Đạt Top 10 tại cuộc thi lập trình HUTECH Code War 2023 với nền tảng giải thuật vững chắc."
+
+        [[languages.vi.params.achievements.items]]
+          title = "Giải Khuyến khích - Ươm mầm tài năng HUTECH 2022"
+          image = "/images/achievements/umtn.jpg"
+          url = "https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14607299-khoa-cong-nghe-thong-tin-to-chuc-cuoc-thi-uom-mam-tai-nang-it-hoi-nghi-tong-ket-va-phat-dong-phong-t"
+          content = "Nhận giải Khuyến khích tại cuộc thi Ươm mầm tài năng IT HUTECH 2022."
+
+        [[languages.vi.params.achievements.items]]
+          title = "Giải Nhì - Hội thi Tin học trẻ Tỉnh Gia Lai 2020"
+          image = "/images/achievements/tht.jpg"
+          url = "https://www.facebook.com/share/p/1FnfCX2JLB/?mibextid=wwXIfr"
+          content = "Đạt Giải Nhì Bảng C tại Hội thi Tin học trẻ Tỉnh Gia Lai 2020."
+
+      [languages.vi.params.contact]
+        enable = true
+        title = "Liên Hệ"
+        content = """
+**Hãy kết nối với tôi!** 
+
+Tôi luôn sẵn sàng cho các cơ hội hợp tác, thảo luận về dự án mới, hoặc trả lời các câu hỏi về công nghệ. Đừng ngần ngại gửi tin nhắn cho tôi!
+"""
+        btnName = "Gửi Email"
+        btnLink = "mailto:bangtrinh.nn@gmail.com"
+
+      [languages.vi.params.blog]
+        enable = true
+        title = "Blog"
+        subtitle = "Chia sẻ kiến thức lập trình"
+
+    [languages.en]
+      languageName = "English"
+      weight = 2
+      title = "Bang Trinh - Developer"
+      contentDir = "content/en"
+      
+      [languages.en.params]
+        name = "Bang Trinh"
+        designation = "Fullstack Developer"
+        description = "Specializing in Java, JavaScript & Network Programming"
+        email = "bangtrinh.nn@gmail.com"
+        mobile = "+84 346 624 592"
+        location = "Ho Chi Minh City, Vietnam"
+        
+        [languages.en.params.hero]
+          enable = true
+          intro = "Hello, I'm"
+          title = "Bang Trinh."
+          subtitle = "Dynamic Developer."
+          content = "With diverse development experience from web to mobile applications, I've mastered multiple technologies with the goal of delivering efficient business solutions."
+          image = "/images/avatar.jpg"
+          roundImage = false
+          
+          [languages.en.params.hero.button]
+            enable = true
+            name = "Resume"
+            url = "/resume.pdf"
+            download = false
+            newPage = true
+
+        [languages.en.params.about]
+          enable = true
+          title = "About"
+          subtitle = "About Me & My Work"
+          image = "/images/avatar.jpg"
+          content = """
+I am a passionate web application developer with a solid programming foundation and always strive to combine technology with creativity. Currently, I'm pursuing a Bachelor's degree in Information Technology at Ho Chi Minh City University of Technology.
+
+I focus on building web applications using Java Spring Boot, JavaScript, and sharing knowledge through my personal blog.
+
+Technologies I'm currently working with:
+
+- Java & Spring Boot
+- Dart & Flutter
+- JavaScript & Node.js
+- React & Express
+- MySQL & SQLServer
+- Docker & Git
+"""
+
+        [languages.en.params.education]
+          enable = true
+          title = "Education"
+          index = false
+
+          [[languages.en.params.education.items]]
+            title = "Bachelor of Information Technology"
+            date = "2022 - Present"
+            school = { name = "Ho Chi Minh City University of Technology", url = "https://www.hutech.edu.vn" }
+            GPA = "3.65/4.0"
+            content = """
+Major: **Software Engineering**
+
+**Achievements:**
+- Encouragement Award - HUTECH Talent Incubation 2022-2023
+- Top 10 HUTECH Code War
+- Student with outstanding scientific research achievement 2023-2024
+"""
+          [[languages.en.params.education.items]]
+            title = "High School"
+            date = "2018 - 2021"
+            school = { name = "Nguyen Binh Khiem High School No.2", url = "https://thptnguyenbinhkhiem.gialai.edu.vn" }
+            content = """
+**Achievements:**
+- 2nd Prize Gia Lai Province Young Informatics Competition 2020
+"""
+
+        [languages.en.params.projects]
+          enable = true
+          title = "Projects"
+
+          [[languages.en.params.projects.items]]
+            title = "High Utility Multi-level Dataset Mining Method"
+            image = "/images/projects/datamining.png"
+            badges = ["Java"]
+            content = "Developed data mining algorithms to discover high utility itemsets at multiple levels in hierarchical databases, along with techniques to improve mining performance."
+            
+            [[languages.en.params.projects.items.links]]
+              icon = "fas fa-external-link-alt"
+              url = "https://link.springer.com/chapter/10.1007/978-3-031-92545-0_45"
+
+          [[languages.en.params.projects.items]]
+            title = "Smart Home"
+            image = "/images/projects/smarthome.png"
+            badges = ["Java", "Spring Boot", "MySQL", "JWT", "ESP-IDF"]
+            content = "Website for managing and controlling household electronic devices with installed devices to receive control commands."
+            
+            [[languages.en.params.projects.items.links]]
+              icon = "fab fa-github"
+              url = "https://github.com/bangtrinh/smart-home"
+
+          [[languages.en.params.projects.items]]
+            title = "Wallet App"
+            image = "/images/projects/walletapp.png"
+            badges = ["Node.js", "Flutter", "Dart", "JavaScript"]
+            content = "Application that simulates transactions, creates shared funds between users, manages expenses, and plans spending with AI support."
+            
+            [[languages.en.params.projects.items.links]]
+              icon = "fab fa-github"
+              url = "https://github.com/bangtrinh/cnpm"
+
+        [languages.en.params.achievements]
+          enable = true
+          title = "Certificates & Achievements"
+
+          [[languages.en.params.achievements.items]]
+            title = "Scientific Paper at RTIS Conference"
+            image = "/images/achievements/nckh.png"
+            url = "https://link.springer.com/chapter/10.1007/978-3-031-92545-0_45"
+            content = "Published scientific paper in Data Mining field at RTIS conference."
+
+          [[languages.en.params.achievements.items]]
+            title = "HUTECH English B1 Certificate"
+            image = "/images/achievements/english.png"
+            content = "Holds B1 English certificate, proving effective communication and working ability in international environment."
+
+          [[languages.en.params.achievements.items]]
+            title = "Top 10 - HUTECH Code War 2023"
+            image = "/images/achievements/codewar.jpg"
+            url = "https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14610686-lo-dien-dan-lap-trinh-vien-xuat-sac-tai-chung-ket-cuoc-thi-hutech-code-war-2023"
+            content = "Achieved Top 10 at HUTECH Code War 2023 programming competition with solid algorithmic foundation."
+
+          [[languages.en.params.achievements.items]]
+            title = "Encouragement Award - HUTECH Talent Incubation 2022"
+            image = "/images/achievements/umtn.jpg"
+            url = "https://www.hutech.edu.vn/homepage/tin-tuc/hoat-dong-sinh-vien/14607299-khoa-cong-nghe-thong-tin-to-chuc-cuoc-thi-uom-mam-tai-nang-it-hoi-nghi-tong-ket-va-phat-dong-phong-t"
+            content = "Received Encouragement Award at HUTECH IT Talent Incubation Competition 2022."
+
+          [[languages.en.params.achievements.items]]
+            title = "2nd Prize - Gia Lai Young Informatics Competition 2020"
+            image = "/images/achievements/tht.jpg"
+            url = "https://www.facebook.com/share/p/1FnfCX2JLB/?mibextid=wwXIfr"
+            content = "Achieved 2nd Prize Category C at Gia Lai Province Young Informatics Competition 2020."
+
+        [languages.en.params.contact]
+          enable = true
+          title = "Contact"
+          content = """
+**Let's connect!**
+
+I'm always open to collaboration opportunities, discussing new projects, or answering technology questions. Don't hesitate to send me a message!
+"""
+          btnName = "Send Email"
+          btnLink = "mailto:bangtrinh.nn@gmail.com"
+
+        [languages.en.params.blog]
+          enable = true
+          title = "Blog"
+          subtitle = "Sharing Programming Knowledge"
+
+# Social links (chung cho cả 2 ngôn ngữ)
+[languages.vi.params.hero.socialLinks]
+  [[languages.vi.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fab fa-github"
+    url = "https://github.com/bangtrinh"
+  [[languages.vi.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fab fa-linkedin"
+    url = "https://linkedin.com/in/trinh-nguyễn-ngọc-băng-571a5b380"
+  [[languages.vi.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fab fa-x-twitter"
+    url = "https://twitter.com/bangtrinhnn"
+  [[languages.vi.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fas fa-envelope"
+    url = "mailto:bangtrinh.nn@gmail.com"
+
+[languages.en.params.hero.socialLinks]
+  [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fab fa-github"
+    url = "https://github.com/bangtrinh"
+  [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fab fa-linkedin"
+    url = "https://linkedin.com/in/trinh-nguyễn-ngọc-băng-571a5b380"
+  [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fab fa-x-twitter"
+    url = "https://twitter.com/bangtrinhnn"
+  [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+    icon = "fas fa-envelope"
+    url = "mailto:bangtrinh.nn@gmail.com"
+
+  [params.footer.recentPosts]
+    enable = true
+    title = "Bài viết gần đây"
+    path = "blogs"
+    count = 3
+    disableFeaturedImage = false
+
+  [languages.en.params.footer.recentPosts]
+    enable = true
+    title = "Recent Posts"
+    path = "blogs"
+    count = 3
+    disableFeaturedImage = false
+
+  [params.terms]
+  read = "Đọc tiếp"
+  toc = "Mục lục"
+  tags = "Tags"
+  social = "Chia sẻ"
+
+  [languages.en.params.terms]
+  read = "Read more"
+  toc = "Table of Contents"
+  tags = "Tags"
+  social = "Share"
+
+  [params.singlePages]
+  readTime = { enable = true, content = "phút đọc" }
+  socialShare = true
+  toc = true
+
+  [languages.en.params.singlePages]
+  readTime = { enable = true, content = "min read" }
+  socialShare = true
+  toc = true
+
+  [params.navbar]
+  searchPlaceholder = "Tìm kiếm bài viết..."
+
+  [languages.en.params.navbar]
+  searchPlaceholder = "Search blog posts..."
+
+# Cấu hình chung
+
+[params.listPages]
+  disableFeaturedImage = false
+
+[params.datesFormat]
+  article = "2/1/2006"
+  articleList = "2/1/2006"
+
+
+
+
+[params.footer.socialNetworks]
+  github = "https://github.com/bangtrinh"
+  linkedin = "https://www.linkedin.com/in/trinh-nguyễn-ngọc-băng-571a5b380/"
+  twitter = "https://twitter.com/bangtrinhnn"
+  instagram = "https://www.instagram.com/nn.bangtrinh/"
+  facebook = "https://www.facebook.com/nnbt126"
+
+# Tắt các section khác
+[params.skills]
+  enable = false
+[params.experience]
+  enable = false
+[params.services]
+  enable = false
+
+# Menu đa ngôn ngữ
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/vi/blogs/"
+    weight = 1
+
+  [[menu.main_en]]  # Menu riêng cho tiếng Anh
+    name = "Blog"
+    url = "/en/blogs/"
+    weight = 1

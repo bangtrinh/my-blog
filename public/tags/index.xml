@@ -1,11 +1,145 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My New Hugo Site</title>
+    <title>Tags on Băng Trinh - Developer</title>
     <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on My New Hugo Site</description>
+    <description>Recent content in Tags on Băng Trinh - Developer</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>vi</language>
+    <lastBuildDate>Mon, 20 Oct 2025 17:20:00 +0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ErrorHandling</title>
+      <link>http://localhost:1313/tags/errorhandling/</link>
+      <pubDate>Mon, 20 Oct 2025 17:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/errorhandling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exception</title>
+      <link>http://localhost:1313/tags/exception/</link>
+      <pubDate>Mon, 20 Oct 2025 17:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/exception/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Mon, 20 Oct 2025 17:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ES6</title>
+      <link>http://localhost:1313/tags/es6/</link>
+      <pubDate>Mon, 20 Oct 2025 17:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/es6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/tags/javascript/</link>
+      <pubDate>Mon, 20 Oct 2025 17:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Modules</title>
+      <link>http://localhost:1313/tags/modules/</link>
+      <pubDate>Mon, 20 Oct 2025 17:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/modules/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional</title>
+      <link>http://localhost:1313/tags/functional/</link>
+      <pubDate>Mon, 20 Oct 2025 17:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/functional/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lambda</title>
+      <link>http://localhost:1313/tags/lambda/</link>
+      <pubDate>Mon, 20 Oct 2025 17:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/lambda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Async</title>
+      <link>http://localhost:1313/tags/async/</link>
+      <pubDate>Mon, 20 Oct 2025 16:50:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/async/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event Loop</title>
+      <link>http://localhost:1313/tags/event-loop/</link>
+      <pubDate>Mon, 20 Oct 2025 16:50:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/event-loop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java17</title>
+      <link>http://localhost:1313/tags/java17/</link>
+      <pubDate>Mon, 20 Oct 2025 16:40:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/java17/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NewFeatures</title>
+      <link>http://localhost:1313/tags/newfeatures/</link>
+      <pubDate>Mon, 20 Oct 2025 16:40:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/newfeatures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Promises</title>
+      <link>http://localhost:1313/tags/promises/</link>
+      <pubDate>Mon, 20 Oct 2025 16:30:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/promises/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Generics</title>
+      <link>http://localhost:1313/tags/generics/</link>
+      <pubDate>Mon, 20 Oct 2025 16:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/generics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Type Safety</title>
+      <link>http://localhost:1313/tags/type-safety/</link>
+      <pubDate>Mon, 20 Oct 2025 16:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/type-safety/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Closures</title>
+      <link>http://localhost:1313/tags/closures/</link>
+      <pubDate>Mon, 20 Oct 2025 16:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/closures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functions</title>
+      <link>http://localhost:1313/tags/functions/</link>
+      <pubDate>Mon, 20 Oct 2025 16:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/functions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Functional Programming</title>
+      <link>http://localhost:1313/tags/functional-programming/</link>
+      <pubDate>Mon, 20 Oct 2025 16:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Streams</title>
+      <link>http://localhost:1313/tags/streams/</link>
+      <pubDate>Mon, 20 Oct 2025 16:00:00 +0700</pubDate>
+      <guid>http://localhost:1313/tags/streams/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
