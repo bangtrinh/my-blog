@@ -1,13 +1,14 @@
+{{- $pages := .Site.RegularPages -}}
 [
-  {{- $pages := .Site.RegularPages -}}
   {{- $total := len $pages -}}
   {{- range $i, $p := $pages -}}
   {
     "id": {{ $p.File.UniqueID | jsonify }},
+    "lang": {{ $p.Lang | jsonify }},
     "title": {{ $p.Title | jsonify }},
     "description": {{ $p.Params.description | default "" | jsonify }},
     "content": {{ $p.Plain | jsonify }},
     "permalink": {{ $p.Permalink | jsonify }}
-  }{{- if lt (add $i 1) $total }},{{ end -}}
+  }{{ if lt (add $i 1) $total }},{{ end }}
   {{- end -}}
 ]

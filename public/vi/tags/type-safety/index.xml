@@ -1,19 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Type Safety on Băng Trinh - Developer</title>
-    <link>http://localhost:1313/vi/tags/type-safety/</link>
-    <description>Recent content in Type Safety on Băng Trinh - Developer</description>
-    <generator>Hugo</generator>
-    <language>vi</language>
-    <lastBuildDate>Mon, 20 Oct 2025 16:20:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/vi/tags/type-safety/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Java Generics Explained</title>
-      <link>http://localhost:1313/vi/blogs/java-generics-explained/</link>
-      <pubDate>Mon, 20 Oct 2025 16:20:00 +0700</pubDate>
-      <guid>http://localhost:1313/vi/blogs/java-generics-explained/</guid>
-      <description>&lt;p&gt;Generics giúp code Java an toàn kiểu dữ liệu và dễ bảo trì.&lt;/p&gt;&#xA;&lt;h2 id=&#34;vì-sao-cần-sử-dụng-generics&#34;&gt;Vì sao cần sử dụng Generics?&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;names.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// names.add(10); // Lỗi biên dịch!&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;mẹo&#34;&gt;Mẹo&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sử dụng &lt;code&gt;&amp;lt;T&amp;gt;&lt;/code&gt; cho class hoặc method.&lt;/li&gt;&#xA;&lt;li&gt;Giúp tránh casting thủ công.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Generics tăng type-safety nhưng không thể sử dụng với primitive types trực tiếp.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Type Safety on Băng Trinh - Developer</title><link>https://bangtrinh.github.io/my-blog/vi/tags/type-safety/</link><description>Recent content in Type Safety on Băng Trinh - Developer</description><generator>Hugo</generator><language>vi</language><lastBuildDate>Mon, 20 Oct 2025 16:20:00 +0700</lastBuildDate><atom:link href="https://bangtrinh.github.io/my-blog/vi/tags/type-safety/index.xml" rel="self" type="application/rss+xml"/><item><title>Java Generics Explained</title><link>https://bangtrinh.github.io/my-blog/vi/blogs/java-generics-explained/</link><pubDate>Mon, 20 Oct 2025 16:20:00 +0700</pubDate><guid>https://bangtrinh.github.io/my-blog/vi/blogs/java-generics-explained/</guid><description>&lt;p&gt;Generics giúp code Java an toàn kiểu dữ liệu và dễ bảo trì.&lt;/p&gt;
+&lt;h2 id="vì-sao-cần-sử-dụng-generics"&gt;Vì sao cần sử dụng Generics?&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;List&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;String&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; names &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ArrayList&lt;span style="color:#f92672"&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;names.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// names.add(10); // Lỗi biên dịch!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="mẹo"&gt;Mẹo&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sử dụng &lt;code&gt;&amp;lt;T&amp;gt;&lt;/code&gt; cho class hoặc method.&lt;/li&gt;
+&lt;li&gt;Giúp tránh casting thủ công.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Generics tăng type-safety nhưng không thể sử dụng với primitive types trực tiếp.&lt;/p&gt;</description></item></channel></rss>
