@@ -8,6 +8,8 @@ tags:
   - Java
   - Functional
   - Lambda
+categories:
+  - Java
 image: /images/blogs/java-functional.png
 description: "Tận dụng lambda và streams để viết code theo phong cách functional trong Java."
 toc: 

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event Loop on Băng Trinh - Developer</title>
-    <link>http://localhost:1313/vi/tags/event-loop/</link>
+    <link>http://localhost:1313/my-blog/vi/tags/event-loop/</link>
     <description>Recent content in Event Loop on Băng Trinh - Developer</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate>Mon, 20 Oct 2025 16:50:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/vi/tags/event-loop/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/my-blog/vi/tags/event-loop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JavaScript Event Loop Demystified</title>
-      <link>http://localhost:1313/vi/blogs/javascript-event-loop-demystified/</link>
+      <link>http://localhost:1313/my-blog/vi/blogs/javascript-event-loop-demystified/</link>
       <pubDate>Mon, 20 Oct 2025 16:50:00 +0700</pubDate>
-      <guid>http://localhost:1313/vi/blogs/javascript-event-loop-demystified/</guid>
+      <guid>http://localhost:1313/my-blog/vi/blogs/javascript-event-loop-demystified/</guid>
       <description>&lt;p&gt;Event Loop là trái tim của JS runtime.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nguyên-lý-hoạt-động&#34;&gt;Nguyên lý hoạt động&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Call Stack&lt;/strong&gt;: Nơi lưu function đang chạy.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Message Queue&lt;/strong&gt;: Nơi lưu callback.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event Loop&lt;/strong&gt;: Kiểm tra stack rỗng để xử lý queue.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Start&amp;#39;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setTimeout&lt;/span&gt;(() =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Timeout&amp;#39;&lt;/span&gt;), &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;End&amp;#39;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;output&#34;&gt;Output&lt;/h3&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Start&#xA;End&#xA;Timeout&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Hiểu event loop giúp debug async code và promise chaining dễ dàng hơn.&lt;/p&gt;</description>
     </item>
   </channel>

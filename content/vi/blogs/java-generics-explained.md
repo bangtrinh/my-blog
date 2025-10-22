@@ -8,6 +8,8 @@ tags:
   - Java
   - Generics
   - Type Safety
+categories:
+  - Java
 image: /images/blogs/java-generic.png
 description: "Tìm hiểu về generics và cách chúng giúp code an toàn hơn."
 toc: 

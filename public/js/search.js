@@ -1,11 +1,13 @@
-// search.js — fixed & robust version
-// Detect base URL automatically (for local or production)
+// search.js — final stable version for GitHub Pages + local Hugo
+// Detect base URL automatically and handle multi-language sites (en/vi)
+
 function encodeHTML(str) {
-  return String(str).replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 function isValidUrl(url) {
@@ -22,12 +24,15 @@ function searchOnChange(evt) {
   clearTimeout(debounceTimeout);
   debounceTimeout = setTimeout(() => {
     performSearch(evt);
-  }, 300); // Debounce delay of 300ms
+  }, 300); // debounce delay
 }
 
 async function performSearch(evt) {
-  // evt may be the event (with target) or an object with target property
-  const input = evt && evt.target ? evt.target : (document.querySelector("#search") || document.querySelector("#search-mobile"));
+  const input =
+    evt && evt.target
+      ? evt.target
+      : document.querySelector("#search") || document.querySelector("#search-mobile");
+
   if (!input) {
     console.error("No search input found.");
     return;
@@ -43,35 +48,44 @@ async function performSearch(evt) {
     return;
   }
 
-  // position the results relative to the input that triggered the search
+  // position search result box near input
   try {
     const rect = input.getBoundingClientRect();
     const sc = document.getElementById("search-content");
     if (sc) {
       sc.style.position = "absolute";
-      sc.style.top = (window.scrollY + rect.bottom + 6) + "px";
-      sc.style.left = (rect.left) + "px";
-      sc.style.width = (window.innerWidth > 768 ? "500px" : "300px");
+      sc.style.top = window.scrollY + rect.bottom + 6 + "px";
+      sc.style.left = rect.left + "px";
+      sc.style.width = window.innerWidth > 768 ? "500px" : "300px";
     }
   } catch (e) {
-    // ignore positioning errors
+    // ignore
   }
 
   try {
-    const langPrefix = window.location.pathname.split('/')[1];
-    const jsonPath = ['en', 'vi'].includes(langPrefix) ? `/${langPrefix}/index.json` : '/index.json';
-    const response = await fetch(jsonPath);
+    // --- ✅ FIX: determine base and lang correctly ---
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+    const hasMyBlog = pathParts[0] === "my-blog";
+    const base = hasMyBlog ? "/my-blog" : "";
+    const langPrefix = hasMyBlog ? pathParts[1] : pathParts[0];
+    const jsonPath = ["en", "vi"].includes(langPrefix)
+      ? `${base}/${langPrefix}/index.json`
+      : `${base}/index.json`;
+    // -------------------------------------------------
 
-    if (!response.ok) throw new Error("Failed to fetch /index.json: " + response.status);
+    const response = await fetch(jsonPath);
+    if (!response.ok) throw new Error("Failed to fetch " + jsonPath + ": " + response.status);
+
     const searchJson = await response.json();
-    console.log("Fetched Data:", searchJson);
 
     const results = (Array.isArray(searchJson) ? searchJson : []).filter((item) => {
       if (!item || typeof item !== "object") return false;
       const title = (item.title || item.Title || "").toString().toLowerCase();
       const desc = (item.description || item.Description || "").toString().toLowerCase();
       const content = (item.content || item.Content || "").toString().toLowerCase();
-      return title.includes(searchQuery) || desc.includes(searchQuery) || content.includes(searchQuery);
+      return (
+        title.includes(searchQuery) || desc.includes(searchQuery) || content.includes(searchQuery)
+      );
     });
 
     const searchResultsContainer = document.getElementById("search-results");
@@ -83,15 +97,14 @@ async function performSearch(evt) {
 
     if (results.length > 0) {
       results.slice(0, 20).forEach((item) => {
-        const href = item.permalink || item.Permalink || item.url || item.Url || item.link || item.Link;
-        if (!href) {
-          console.warn("Skipping invalid search result (no href):", item);
-          return;
-        }
-
-        // Accept both absolute and relative URLs
-        const finalHref = href.startsWith("http") ? href : new URL(href, window.location.origin).href;
-
+        const href =
+          item.permalink ||
+          item.Permalink ||
+          item.url ||
+          item.Url ||
+          item.link ||
+          item.Link;
+        if (!href) return;
 
         const card = document.createElement("div");
         card.className = "card mb-2";
@@ -125,18 +138,16 @@ async function performSearch(evt) {
     const sc = document.getElementById("search-content");
     if (sc) sc.style.display = "block";
   } catch (error) {
-    console.error("Error fetching /index.json or processing results:", error);
+    console.error("Error fetching or processing search index:", error);
   }
 }
 
-// Robust Enter/Escape/click-outside handlers
+// Handle Enter, Escape, and click-outside events
 window.addEventListener("load", () => {
   const inputs = Array.from(document.querySelectorAll("#search, #search-mobile"));
   console.log("Search inputs found:", inputs.length);
 
-  inputs.forEach(input => {
-    // If input already uses inline oninput to call searchOnChange, keep it.
-    // Also add keydown handler for Enter/Escape
+  inputs.forEach((input) => {
     input.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
         e.preventDefault();
@@ -150,11 +161,13 @@ window.addEventListener("load", () => {
     });
   });
 
-  // click outside to close
   document.addEventListener("click", (e) => {
     const sc = document.getElementById("search-content");
     if (!sc) return;
-    if (!sc.contains(e.target) && !Array.from(inputs).some(i => i.contains(e.target))) {
+    if (
+      !sc.contains(e.target) &&
+      !inputs.some((i) => i.contains(e.target))
+    ) {
       sc.style.display = "none";
     }
   });

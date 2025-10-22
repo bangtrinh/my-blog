@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Closures
   - Functions
+categories:
+  - JavaScript
 image: /images/blogs/js-closures.png
 description: "Khám phá sức mạnh của closures trong JavaScript."
 toc: 

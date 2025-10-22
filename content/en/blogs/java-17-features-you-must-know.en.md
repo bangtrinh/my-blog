@@ -8,6 +8,8 @@ tags:
   - Java
   - Java17
   - NewFeatures
+categories:
+  - Java
 image: /images/blogs/java17.png
 description: "Exciting new features in Java 17 you should try."
 toc: 

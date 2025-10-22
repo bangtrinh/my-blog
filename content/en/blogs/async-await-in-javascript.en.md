@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Async
   - Promises
+categories:
+  - JavaScript
 image: /images/blogs/js-async.png
 description: "Learn how to handle asynchronous code in JavaScript easily with async/await."
 toc: 

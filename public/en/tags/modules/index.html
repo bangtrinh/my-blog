@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-<link rel="icon" href=/fav.png type="image/gif">
+<link rel="icon" href=../../../fav.png type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
 </noscript>
 
 
-<link rel="stylesheet" href="/css/font.css" media="all">
+<link rel="stylesheet" href="../../../css/font.css" media="all">
 
 
 
-<meta property="og:url" content="http://localhost:1313/en/tags/modules/">
+<meta property="og:url" content="http://localhost:1313/my-blog/en/tags/modules/">
   <meta property="og:site_name" content="Bang Trinh - Developer">
   <meta property="og:title" content="Modules">
   <meta property="og:description" content="Specializing in Java, JavaScript &amp; Network Programming">
@@ -41,11 +41,11 @@
   <meta name="twitter:description" content="Specializing in Java, JavaScript &amp; Network Programming">
 
 
-<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
-<link rel="stylesheet" href="/css/footer.css" media="all">
+<link rel="stylesheet" href="../../../bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="../../../css/header.css" media="all">
+<link rel="stylesheet" href="../../../css/footer.css" media="all">
 
 
-<link rel="stylesheet" href="/css/theme.css" media="all">
+<link rel="stylesheet" href="../../../css/theme.css" media="all">
 
 <style>
     :root {
@@ -103,7 +103,7 @@
 
 
 <meta name="description" content="Modules of Bang Trinh - Developer">
-<link rel="stylesheet" href="/css/list.css" media="all">
+<link rel="stylesheet" href="../../../css/list.css" media="all">
 
 
   
@@ -148,7 +148,7 @@ Modules | Bang Trinh - Developer
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
             
-            <a class="navbar-brand primary-font text-wrap" href="/">
+            <a class="navbar-brand primary-font text-wrap" href="../../../">
                 
                 <span class="brand-name"></span>
                 
@@ -180,7 +180,7 @@ Modules | Bang Trinh - Developer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link nav-item-link" href="/en/#about" aria-label="about">
+                        <a class="nav-link nav-item-link" href="../../../en/#about" aria-label="about">
                             About
                         </a>
                     </li>
@@ -190,7 +190,7 @@ Modules | Bang Trinh - Developer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link nav-item-link" href="/en/#education"
+                        <a class="nav-link nav-item-link" href="../../../en/#education"
                             aria-label="education">
                             Education
                         </a>
@@ -199,7 +199,7 @@ Modules | Bang Trinh - Developer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link nav-item-link" href="/en/#projects"
+                        <a class="nav-link nav-item-link" href="../../../en/#projects"
                             aria-label="projects">
                             Projects
                         </a>
@@ -208,7 +208,7 @@ Modules | Bang Trinh - Developer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link nav-item-link" href="/en/#achievements"
+                        <a class="nav-link nav-item-link" href="../../../en/#achievements"
                             aria-label="achievements">
                             Certificates &amp; Achievements
                         </a>
@@ -217,7 +217,7 @@ Modules | Bang Trinh - Developer
 
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link nav-item-link" href="/en/#contact"
+                        <a class="nav-link nav-item-link" href="../../../en/#contact"
                             aria-label="contact">
                             Contact
                         </a>
@@ -231,7 +231,7 @@ Modules | Bang Trinh - Developer
                     
                     
                     <li class="nav-item navbar-text">
-                        <a class="nav-link nav-item-link" href="/vi/blogs/" title="">
+                        <a class="nav-link nav-item-link" href="../../../vi/blogs/" title="">
                             
                             Blog
                         </a>
@@ -279,7 +279,7 @@ Modules | Bang Trinh - Developer
                                     <ul class="dropdown-menu shadow-lg rounded">
                                         
                                         <li>
-                                            <a class="dropdown-item text-center nav-link" href="http://localhost:1313/vi/tags/modules/">
+                                            <a class="dropdown-item text-center nav-link" href="http://localhost:1313/my-blog/vi/tags/modules/">
                                                 
                                                 🇻🇳
                                                 
@@ -288,7 +288,7 @@ Modules | Bang Trinh - Developer
                                         </li>
                                         
                                         <li>
-                                            <a class="dropdown-item text-center nav-link" href="http://localhost:1313/en/tags/modules/">
+                                            <a class="dropdown-item text-center nav-link" href="http://localhost:1313/my-blog/en/tags/modules/">
                                                 
                                                 🇺🇸
                                                 
@@ -491,20 +491,36 @@ Modules | Bang Trinh - Developer
 <div id="content">
 <div class="container pt-5" id="list-page">
     <h2 class="text-center pb-2">Modules</h2>
-    <div class="row">
+
+    
+    <div class="text-center mb-4">
+        <label for="categoryFilter" class="me-2 fw-semibold">
+            Filter by category:
+        </label>
+        <select id="categoryFilter" class="form-select d-inline-block w-auto">
+            <option value="all">All</option>
+            
+            <option value="java">Java</option>
+            
+            <option value="javascript">Javascript</option>
+            
+        </select>
+    </div>
+
+    <div class="row" id="postsContainer">
         
-        <div class="col-lg-4 col-md-6 my-3">
+        <div class="col-lg-4 col-md-6 my-3 post-card" data-categories="JavaScript">
             <div class="card-columns">
                 <div class="card h-100">
                     
                     <div class="card-header">
-                        <a href="/en/blogs/javascript-modules-explained/">
-                            <img src="/images/blogs/js-module.png" class="card-img-top" alt="JavaScript Modules Explained">
+                        <a href="../../../en/blogs/javascript-modules-explained/">
+                            <img src="../../../images/blogs/js-module.png" class="card-img-top" alt="JavaScript Modules Explained">
                         </a>
                     </div>
                     
                     <div class="card-body bg-transparent p-4 shadow-sm">
-                        <a href="/en/blogs/javascript-modules-explained/" class="primary-font card-title">
+                        <a href="../../../en/blogs/javascript-modules-explained/" class="primary-font card-title">
                             <h5 class="card-title bg-transparent" title="JavaScript Modules Explained">JavaScript Modules …</h5>
                         </a>
                         <div class="card-text secondary-font">
@@ -522,19 +538,128 @@ Modules | Bang Trinh - Developer
                     </div>
                     <div class="mt-auto post-footer bg-transparent py-3">
                         <span class="float-start bg-transparent">20/10/2025</span>
-                        <a href="/en/blogs/javascript-modules-explained/" class="float-end btn btn-outline-info btn-sm">Read more</a>
+                        <a href="../../../en/blogs/javascript-modules-explained/" class="float-end btn btn-outline-info btn-sm">Read more</a>
                     </div>
                 </div>
             </div>
         </div>
         
+
         <div class="row justify-content-center">
             <div class="col-auto m-3">
+                
+                
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            
+                            
+                            
+                                <li class="page-item active">
+                                    <a class="page-link" href="../../../en/tags/modules/">1</a>
+                                </li>
+                            
+                            
+                            
+                        </ul>
+                    </nav>
                 
             </div>
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const filter = document.getElementById("categoryFilter");
+    const posts = document.querySelectorAll(".post-card");
+
+    
+    function getURLParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    
+    function updateURLWithFilter(category) {
+        const url = new URL(window.location);
+        if (category === 'all') {
+            url.searchParams.delete('category');
+        } else {
+            url.searchParams.set('category', category);
+        }
+        window.history.replaceState({}, '', url);
+    }
+
+    
+    function applyFilter(selectedCategory) {
+        let visibleCount = 0;
+        posts.forEach(post => {
+            const categories = (post.dataset.categories || "").toLowerCase().split(" ");
+            if (selectedCategory === "all" || categories.includes(selectedCategory)) {
+                post.style.display = "";
+                visibleCount++;
+            } else {
+                post.style.display = "none";
+            }
+        });
+        
+        
+        if (visibleCount === 0 && selectedCategory !== 'all') {
+            const noResults = document.getElementById('noResults');
+            if (!noResults) {
+                const noResultsMsg = document.createElement('div');
+                noResultsMsg.id = 'noResults';
+                noResultsMsg.className = 'col-12 text-center mt-4';
+                noResultsMsg.innerHTML = `<p class="text-muted">Không có bài viết nào trong danh mục này.</p>`;
+                document.getElementById('postsContainer').appendChild(noResultsMsg);
+            }
+        } else {
+            const noResults = document.getElementById('noResults');
+            if (noResults) noResults.remove();
+        }
+    }
+
+    
+    const savedCategory = getURLParam('category');
+    if (savedCategory) {
+        filter.value = savedCategory;
+        applyFilter(savedCategory.toLowerCase());
+    }
+
+    
+    filter.addEventListener("change", function() {
+        const selected = this.value.toLowerCase();
+        applyFilter(selected);
+        updateURLWithFilter(selected);
+        
+        
+        updatePaginationLinks(selected);
+        
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    
+    function updatePaginationLinks(category) {
+        const paginationLinks = document.querySelectorAll('.pagination a');
+        paginationLinks.forEach(link => {
+            const href = new URL(link.href, window.location.origin);
+            if (category === 'all') {
+                href.searchParams.delete('category');
+            } else {
+                href.searchParams.set('category', category);
+            }
+            link.href = href.toString();
+        });
+    }
+
+    
+    const currentCategory = filter.value.toLowerCase();
+    if (currentCategory !== 'all') {
+        updatePaginationLinks(currentCategory);
+    }
+});
+</script>
 
   </div><footer>
     
@@ -552,13 +677,13 @@ Modules | Bang Trinh - Developer
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="/en/blogs/java-exception-handling-tips/">
-                        <img src="/images/blogs/java-exception.png" class="card-img-top" alt="Java Exception Handling Tips">
+                    <a href="../../../en/blogs/java-exception-handling-tips/">
+                        <img src="../../../images/blogs/java-exception.png" class="card-img-top" alt="Java Exception Handling Tips">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="/en/blogs/java-exception-handling-tips/" class="primary-font card-title">
+                    <a href="../../../en/blogs/java-exception-handling-tips/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="Java Exception Handling Tips">Java Exception Handling …</h5>
                     </a>
                     <div class="card-text secondary-font">
@@ -578,7 +703,7 @@ Modules | Bang Trinh - Developer
                 </div>
                 <div class="mt-auto card-footer">
                     <span class="float-start">20/10/2025</span>
-                    <a href="/en/blogs/java-exception-handling-tips/" class="float-end btn btn-outline-info btn-sm">Read more</a>
+                    <a href="../../../en/blogs/java-exception-handling-tips/" class="float-end btn btn-outline-info btn-sm">Read more</a>
                 </div>
             </div>
         </div>
@@ -587,13 +712,13 @@ Modules | Bang Trinh - Developer
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="/en/blogs/javascript-modules-explained/">
-                        <img src="/images/blogs/js-module.png" class="card-img-top" alt="JavaScript Modules Explained">
+                    <a href="../../../en/blogs/javascript-modules-explained/">
+                        <img src="../../../images/blogs/js-module.png" class="card-img-top" alt="JavaScript Modules Explained">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="/en/blogs/javascript-modules-explained/" class="primary-font card-title">
+                    <a href="../../../en/blogs/javascript-modules-explained/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="JavaScript Modules Explained">JavaScript Modules …</h5>
                     </a>
                     <div class="card-text secondary-font">
@@ -611,7 +736,7 @@ Modules | Bang Trinh - Developer
                 </div>
                 <div class="mt-auto card-footer">
                     <span class="float-start">20/10/2025</span>
-                    <a href="/en/blogs/javascript-modules-explained/" class="float-end btn btn-outline-info btn-sm">Read more</a>
+                    <a href="../../../en/blogs/javascript-modules-explained/" class="float-end btn btn-outline-info btn-sm">Read more</a>
                 </div>
             </div>
         </div>
@@ -620,13 +745,13 @@ Modules | Bang Trinh - Developer
             <div class="card h-100">
                 
                 <div class="card-header">
-                    <a href="/en/blogs/functional-programming-in-java/">
-                        <img src="/images/blogs/java-functional.png" class="card-img-top" alt="Functional Programming in Java">
+                    <a href="../../../en/blogs/functional-programming-in-java/">
+                        <img src="../../../images/blogs/java-functional.png" class="card-img-top" alt="Functional Programming in Java">
                     </a>
                 </div>
                 
                 <div class="card-body bg-transparent p-3 shadow-sm">
-                    <a href="/en/blogs/functional-programming-in-java/" class="primary-font card-title">
+                    <a href="../../../en/blogs/functional-programming-in-java/" class="primary-font card-title">
                         <h5 class="card-title bg-transparent" title="Functional Programming in Java">Functional Programming in …</h5>
                     </a>
                     <div class="card-text secondary-font">
@@ -644,7 +769,7 @@ Modules | Bang Trinh - Developer
                 </div>
                 <div class="mt-auto card-footer">
                     <span class="float-start">20/10/2025</span>
-                    <a href="/en/blogs/functional-programming-in-java/" class="float-end btn btn-outline-info btn-sm">Read more</a>
+                    <a href="../../../en/blogs/functional-programming-in-java/" class="float-end btn btn-outline-info btn-sm">Read more</a>
                 </div>
             </div>
         </div>
@@ -765,7 +890,7 @@ Modules | Bang Trinh - Developer
         </div>
     </div>
 </div>
-</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+</footer><script src="../../../bootstrap-5/js/bootstrap.bundle.min.js"></script>
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.documentElement.classList.add('dark');
@@ -800,7 +925,7 @@ Modules | Bang Trinh - Developer
 </script>
 
 
-    <script src="/js/search.js"></script>
+    <script src="../../../js/search.js"></script>
 
 
 

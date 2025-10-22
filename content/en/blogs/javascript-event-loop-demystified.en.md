@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Event Loop
   - Async
+categories:
+  - JavaScript
 image: /images/blogs/eventloop.png
 description: "Understand the event loop mechanism to handle async code in JavaScript."
 toc: 

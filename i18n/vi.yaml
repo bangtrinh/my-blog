@@ -64,3 +64,15 @@
   
   recent_posts_title:
   other: "Bài Viết Mới Nhất"
+
+- id: "categoryFilter"
+  translation: "Chọn danh mục:"
+
+- id: "allCategories"
+  translation: "Tất cả"
+
+- id: "readMore"
+  translation: "Đọc tiếp"
+
+- id: "filteredBy"
+  translation: "Đang lọc theo:"

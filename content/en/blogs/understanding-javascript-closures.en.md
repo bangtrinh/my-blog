@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Closures
   - Functions
+categories:
+  - JavaScript
 image: /images/blogs/js-closures.png
 description: "Discover the power of closures in JavaScript."
 toc: 

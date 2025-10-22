@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Event Loop
   - Async
+categories:
+  - JavaScript
 image: /images/blogs/eventloop.png
 description: "Hiểu rõ cơ chế event loop để xử lý async code trong JavaScript."
 toc: 

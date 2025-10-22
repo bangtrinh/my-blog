@@ -8,6 +8,8 @@ tags:
   - Java
   - Exception
   - ErrorHandling
+categories:
+  - Java
 image: /images/blogs/java-exception.png
 description: "How to handle exceptions in Java effectively."
 toc: 

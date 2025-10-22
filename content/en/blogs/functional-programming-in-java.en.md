@@ -8,6 +8,8 @@ tags:
   - Java
   - Functional
   - Lambda
+categories:
+  - Java
 image: /images/blogs/java-functional.png
 description: "Leverage lambda and streams to write code in a functional style in Java."
 toc: 
