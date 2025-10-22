@@ -3,7 +3,7 @@ name: Deploy Hugo site to GitHub Pages
 on:
   push:
     branches:
-      - main  # khi bạn push vào branch main
+      - source  # khi bạn push vào branch main
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.151.2'
           extended: true
 
       - name: Build Hugo

@@ -411,6 +411,7 @@ I'm always open to collaboration opportunities, discussing new projects, or answ
 [params.datesFormat]
   article = "2/1/2006"
   articleList = "2/1/2006"
+  articleRecent = "2/1/2006"
 
 
 
