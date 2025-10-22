@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Bang Trinh - Developer</title><link>https://bangtrinh.github.io/my-blog/en/categories/</link><description>Recent content in Categories on Bang Trinh - Developer</description><generator>Hugo</generator><language>en</language><atom:link href="https://bangtrinh.github.io/my-blog/en/categories/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Bang Trinh - Developer</title>
+    <link>http://localhost:1313/my-blog/en/categories/</link>
+    <description>Recent content in Categories on Bang Trinh - Developer</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Oct 2025 17:20:00 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/my-blog/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/my-blog/en/categories/java/</link>
+      <pubDate>Mon, 20 Oct 2025 17:20:00 +0700</pubDate>
+      <guid>http://localhost:1313/my-blog/en/categories/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/my-blog/en/categories/javascript/</link>
+      <pubDate>Mon, 20 Oct 2025 17:10:00 +0700</pubDate>
+      <guid>http://localhost:1313/my-blog/en/categories/javascript/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

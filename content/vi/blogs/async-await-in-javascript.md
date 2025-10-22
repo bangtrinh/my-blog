@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Async
   - Promises
+categories:
+  - JavaScript
 image: /images/blogs/js-async.png
 description: "Học cách xử lý asynchronous code trong JavaScript dễ dàng với async/await."
 toc: 

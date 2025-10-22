@@ -8,6 +8,8 @@ tags:
   - Java
   - Streams
   - Functional Programming
+categories:
+  - Java
 image: /images/blogs/java-streams.png
 description: "Học cách sử dụng Java Streams để xử lý dữ liệu dễ dàng."
 toc: 

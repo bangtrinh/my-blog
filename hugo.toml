@@ -6,7 +6,6 @@ defaultContentLanguageInSubdir = true
 relativeURLs = true
 canonifyURLs = true
 
-
 [pagination]
 pagerSize = 6
 

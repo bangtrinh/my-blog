@@ -8,6 +8,8 @@ tags:
   - JavaScript
   - Modules
   - ES6
+categories:
+  - JavaScript
 image: /images/blogs/js-module.png
 description: "Learn how to organize your code using ES6 modules in JavaScript."
 toc: 

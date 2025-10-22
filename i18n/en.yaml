@@ -64,3 +64,15 @@
 
   recent_posts_title:
   other: "Recent Posts"
+
+- id: "categoryFilter"
+  translation: "Filter by category:"
+
+- id: "allCategories"
+  translation: "All"
+
+- id: "readMore"
+  translation: "Read more"
+
+- id: "filteredBy"
+  translation: "Filtered by:"

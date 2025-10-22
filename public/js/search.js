@@ -73,12 +73,10 @@ async function performSearch(evt) {
       : `${base}/index.json`;
     // -------------------------------------------------
 
-    console.log("Fetching search data:", jsonPath);
     const response = await fetch(jsonPath);
     if (!response.ok) throw new Error("Failed to fetch " + jsonPath + ": " + response.status);
 
     const searchJson = await response.json();
-    console.log("Fetched Data:", searchJson);
 
     const results = (Array.isArray(searchJson) ? searchJson : []).filter((item) => {
       if (!item || typeof item !== "object") return false;
