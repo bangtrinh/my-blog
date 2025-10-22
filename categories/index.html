@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+<link rel="icon" href=/fav.png type="image/gif">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      media="print" onload="this.media='all'" />
+<noscript>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+</noscript>
+
+
+<link rel="stylesheet" href="/css/font.css" media="all">
+
+
+
+<meta property="og:url" content="https://example.org/categories/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Categories">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Categories">
+
+
+<link rel="stylesheet" href="/bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/css/header.css" media="all">
+<link rel="stylesheet" href="/css/footer.css" media="all">
+
+
+<link rel="stylesheet" href="/css/theme.css" media="all">
+
+<style>
+    :root {
+        --text-color: #343a40;
+        --text-secondary-color: #6c757d;
+        --text-link-color: #007bff;
+        --background-color: #eaedf0;
+        --secondary-background-color: #64ffda1a;
+        --primary-color: #007bff;
+        --secondary-color: #f8f9fa;
+
+         
+        --text-color-dark: #e4e6eb;
+        --text-secondary-color-dark: #b0b3b8;
+        --text-link-color-dark: #ffffff;
+        --background-color-dark: #18191a;
+        --secondary-background-color-dark: #212529;
+        --primary-color-dark: #ffffff;
+        --secondary-color-dark: #212529;
+    }
+    body {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    html {
+        background-color: var(--background-color) !important;
+    }
+
+    body::-webkit-scrollbar {
+        height: 0px;
+        width: 8px;
+        background-color: var(--background-color);
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 1rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 1rem;
+        background: #b0b0b0;
+        outline: 1px solid var(--background-color);
+    }
+
+    #search-content::-webkit-scrollbar {
+        width: .5em;
+        height: .1em;
+        background-color: var(--background-color);
+    }
+</style>
+
+
+
+<meta name="description" content="Categories of My New Hugo Site">
+<link rel="stylesheet" href="/css/list.css" media="all">
+
+
+  
+  
+
+  <title>
+Categories | My New Hugo Site
+
+  </title>
+</head>
+
+<body class="light">
+  
+  
+<script>
+    let localStorageValue = localStorage.getItem("pref-theme");
+    let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    switch (localStorageValue) {
+        case "dark":
+            document.documentElement.classList.add('dark');
+            document.body.classList.add('dark');
+            break;
+        case "light":
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            break;
+        default:
+            if (mediaQuery) {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+            break;
+    }
+</script>
+
+
+
+
+
+<header id="profileHeader" class="navbar-container">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+            
+            <a class="navbar-brand primary-font text-wrap" href="/">
+                
+                <span class="brand-name"></span>
+                
+            </a>
+
+            
+                <div class="search-container d-none d-md-block">
+                    <input id="search" autocomplete="off" class="form-control search-input" placeholder='Ctrl &#43; k to Search...'
+                        aria-label="Search" oninput="searchOnChange(event)">
+                </div>
+            
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                <ul class="navbar-nav ms-auto text-center">
+                    
+                        <li class="nav-item navbar-text d-block d-md-none">
+                            <div class="nav-link">
+                                <input id="search-mobile" autocomplete="off" class="form-control search-input" placeholder='Ctrl &#43; k to Search...' aria-label="Search" oninput="searchOnChange(event)">
+                            </div>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                    
+
+                    <div class="navbar-actions">
+                        
+                        <li class="nav-item navbar-text">
+                            
+                            <div class="text-center">
+                                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                                    </svg>
+                                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="5"></circle>
+                                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </li>
+                        
+
+                        
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+     
+    .navbar-container {
+        transition: all 0.3s ease;
+    }
+    
+    .dark .navbar-container {
+        background-color: rgba(30, 30, 30, 0.95);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+    
+    .brand-logo {
+        margin-right: 0.5rem;
+        border-radius: 4px;
+    }
+    
+    .brand-name {
+        color: inherit;
+    }
+    
+    .search-container {
+        flex-grow: 0.5;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .search-input {
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        border: 1px solid #dee2e6;
+        transition: all 0.3s ease;
+    }
+    
+    .search-input:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        border-color: #80bdff;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.5em;
+        height: 1.5em;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+        .language-toggle { transition: all 0.3s ease; }
+    .dark .language-toggle { background-color: #343a40; color: #f8f9fa; }
+    
+    .nav-item-link {
+        position: relative;
+        padding: 0.5rem 1rem !important;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+    
+    .nav-item-link:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .nav-item-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #007bff;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
+    
+    .nav-item-link:hover::after {
+        width: 80%;
+    }
+    
+    .navbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .theme-toggle-btn {
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .theme-toggle-btn:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+        transform: scale(1.1);
+    }
+    
+    .language-toggle {
+        border-radius: 20px;
+        padding: 0.25rem 0.75rem;
+        transition: all 0.3s ease;
+    }
+    
+    .language-toggle:hover {
+        transform: translateY(-2px);
+    }
+    
+    .dropdown-menu {
+        border: none;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        transition: all 0.2s ease;
+    }
+    
+    .dropdown-item:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+    
+    .showHeaderOnTop {
+        transform: translateY(0);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+     
+    @media (max-width: 991.98px) {
+        .navbar-actions {
+            justify-content: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .dark .navbar-actions {
+            border-top: 1px solid #444;
+        }
+        
+        .search-container {
+            max-width: 100%;
+            margin: 0.5rem 0;
+        }
+    }
+    
+    @media (max-width: 575.98px) {
+        .container-fluid {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        .navbar-brand {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+
+<div id="content">
+<div class="container pt-5" id="list-page">
+    <h2 class="text-center pb-2">Categories</h2>
+
+    
+    <div class="text-center mb-4">
+        <label for="categoryFilter" class="me-2 fw-semibold">
+            
+        </label>
+        <select id="categoryFilter" class="form-select d-inline-block w-auto">
+            <option value="all"></option>
+            
+        </select>
+    </div>
+
+    <div class="row" id="postsContainer">
+        
+
+        <div class="row justify-content-center">
+            <div class="col-auto m-3">
+                
+                
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            
+                            
+                            
+                                <li class="page-item active">
+                                    <a class="page-link" href="/categories/">1</a>
+                                </li>
+                            
+                            
+                            
+                        </ul>
+                    </nav>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const filter = document.getElementById("categoryFilter");
+    const posts = document.querySelectorAll(".post-card");
+
+    
+    function getURLParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    
+    function updateURLWithFilter(category) {
+        const url = new URL(window.location);
+        if (category === 'all') {
+            url.searchParams.delete('category');
+        } else {
+            url.searchParams.set('category', category);
+        }
+        window.history.replaceState({}, '', url);
+    }
+
+    
+    function applyFilter(selectedCategory) {
+        let visibleCount = 0;
+        posts.forEach(post => {
+            const categories = (post.dataset.categories || "").toLowerCase().split(" ");
+            if (selectedCategory === "all" || categories.includes(selectedCategory)) {
+                post.style.display = "";
+                visibleCount++;
+            } else {
+                post.style.display = "none";
+            }
+        });
+        
+        
+        if (visibleCount === 0 && selectedCategory !== 'all') {
+            const noResults = document.getElementById('noResults');
+            if (!noResults) {
+                const noResultsMsg = document.createElement('div');
+                noResultsMsg.id = 'noResults';
+                noResultsMsg.className = 'col-12 text-center mt-4';
+                noResultsMsg.innerHTML = `<p class="text-muted">Không có bài viết nào trong danh mục này.</p>`;
+                document.getElementById('postsContainer').appendChild(noResultsMsg);
+            }
+        } else {
+            const noResults = document.getElementById('noResults');
+            if (noResults) noResults.remove();
+        }
+    }
+
+    
+    const savedCategory = getURLParam('category');
+    if (savedCategory) {
+        filter.value = savedCategory;
+        applyFilter(savedCategory.toLowerCase());
+    }
+
+    
+    filter.addEventListener("change", function() {
+        const selected = this.value.toLowerCase();
+        applyFilter(selected);
+        updateURLWithFilter(selected);
+        
+        
+        updatePaginationLinks(selected);
+        
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    
+    function updatePaginationLinks(category) {
+        const paginationLinks = document.querySelectorAll('.pagination a');
+        paginationLinks.forEach(link => {
+            const href = new URL(link.href, window.location.origin);
+            if (category === 'all') {
+                href.searchParams.delete('category');
+            } else {
+                href.searchParams.set('category', category);
+            }
+            link.href = href.toString();
+        });
+    }
+
+    
+    const currentCategory = filter.value.toLowerCase();
+    if (currentCategory !== 'all') {
+        updatePaginationLinks(currentCategory);
+    }
+});
+</script>
+
+  </div><footer>
+    
+ 
+
+<div class="text-center pt-2">
+    
+
+    
+
+    
+
+    
+
+    
+</div><div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center">
+            
+            &copy; 2025  All Rights Reserved
+            <div class="text-secondary">
+                Made with
+                <span class="text-danger">
+                    &#10084;
+                </span>
+                and
+                <a href="https://github.com/gurusabarish/hugo-profile" target="_blank"
+                    title="Designed and developed by gurusabarish">
+                    Hugo Profile
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer><script src="/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+    }
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            document.documentElement.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+</script>
+
+
+    <script src="/js/search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+  <section id="search-content" class="py-2">
+    <div class="container" id="search-results"></div>
+  </section>
+</body>
+
+</html>
