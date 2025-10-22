@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NewFeatures on Băng Trinh - Developer</title>
+    <link>https://bangtrinh.github.io/my-blog/vi/tags/newfeatures/</link>
+    <description>Recent content in NewFeatures on Băng Trinh - Developer</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Mon, 20 Oct 2025 16:40:00 +0700</lastBuildDate>
+    <atom:link href="https://bangtrinh.github.io/my-blog/vi/tags/newfeatures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java 17 Features You Must Know</title>
+      <link>https://bangtrinh.github.io/my-blog/vi/blogs/java-17-features-you-must-know/</link>
+      <pubDate>Mon, 20 Oct 2025 16:40:00 +0700</pubDate>
+      <guid>https://bangtrinh.github.io/my-blog/vi/blogs/java-17-features-you-must-know/</guid>
+      <description>&lt;p&gt;Java 17 mang đến nhiều cải tiến hữu ích.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nổi-bật&#34;&gt;Nổi bật&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Sealed Classes&lt;/strong&gt;: Giới hạn class con.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Records&lt;/strong&gt;: Data class ngắn gọn.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pattern Matching for switch&lt;/strong&gt;: Dễ đọc hơn.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;record&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Point&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; y) {}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Point p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Point(1, 2);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(p.&lt;span style=&#34;color:#a6e22e&#34;&gt;x&lt;/span&gt;());&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; Cập nhật lên Java 17 để tận dụng các tính năng hiện đại và tối ưu code.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
