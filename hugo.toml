@@ -3,7 +3,7 @@ languageCode = "vi"
 theme = "hugo-profile"
 defaultContentLanguage = "vi"
 defaultContentLanguageInSubdir = true
-relativeURLs = true
+relativeURLs = false
 canonifyURLs = true
 
 [pagination]
@@ -19,6 +19,7 @@ section = ["HTML", "RSS", "JSON"]
     weight = 1
     title = "Băng Trinh - Developer"
     contentDir = "content/vi"
+    baseURL = "https://bangtrinh.github.io/my-blog/vi/"
     
     [languages.vi.params]
       name = "Băng Trinh"
@@ -179,6 +180,7 @@ Tôi luôn sẵn sàng cho các cơ hội hợp tác, thảo luận về dự á
       weight = 2
       title = "Bang Trinh - Developer"
       contentDir = "content/en"
+      baseURL = "https://bangtrinh.github.io/my-blog/vi/"
       
       [languages.en.params]
         name = "Bang Trinh"
