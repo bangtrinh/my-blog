@@ -525,26 +525,50 @@ Async/Await in JavaScript | Băng Trinh - Developer
           </div>
           
           <article class="page-content  p-2">
-          <p>Async/Await giúp viết code bất đồng bộ trông như đồng bộ.</p>
-<h2 id="ví-dụ">Ví dụ</h2>
+          <p>Async/Await là cú pháp được giới thiệu từ ES2017 giúp việc xử lý các tác vụ bất đồng bộ (asynchronous) trở nên dễ đọc và bảo trì hơn. Thay vì phải sử dụng callback hoặc Promise chaining phức tạp, bạn có thể viết code gần giống như lập trình đồng bộ.</p>
+<h2 id="1-tổng-quan-về-asyncawait">1. Tổng quan về Async/Await</h2>
+<ul>
+<li><code>async</code> biến một hàm bình thường thành một Promise.</li>
+<li><code>await</code> giúp “chờ” một Promise hoàn thành trước khi thực thi dòng lệnh tiếp theo.</li>
+</ul>
+<p>Điều này đặc biệt hữu ích khi làm việc với API hoặc xử lý dữ liệu từ server.</p>
+<h2 id="2-ví-dụ-cơ-bản">2. Ví dụ cơ bản</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fetchData</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://api.example.com/data&#39;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>();
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">data</span>);
-</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Dữ liệu nhận được:&#39;</span>, <span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Lỗi khi fetch dữ liệu:&#39;</span>, <span style="color:#a6e22e">error</span>);
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">fetchData</span>();
-</span></span></code></pre></div><h3 id="mẹo">Mẹo</h3>
+</span></span></code></pre></div><h2 id="3-ưu-điểm-của-asyncawait">3. Ưu điểm của Async/Await</h2>
 <ul>
-<li>Luôn dùng <code>try/catch</code> để xử lý lỗi.</li>
-<li><code>await</code> chỉ dùng trong <code>async</code> function.</li>
+<li>Cú pháp rõ ràng, dễ hiểu.</li>
+<li>Giảm thiểu callback hell.</li>
+<li>Dễ dàng gỡ lỗi và bảo trì.</li>
 </ul>
-<!-- raw HTML omitted -->
-<p><strong>N.B.</strong> Async/await giúp tránh callback hell và code readable hơn.</p>
+<h2 id="4-một-số-lưu-ý-quan-trọng">4. Một số lưu ý quan trọng</h2>
+<ul>
+<li><code>await</code> chỉ hoạt động bên trong hàm được khai báo <code>async</code>.</li>
+<li>Có thể dùng <code>Promise.all()</code> để chạy nhiều tác vụ bất đồng bộ song song.</li>
+<li>Nên luôn dùng <code>try...catch</code> để xử lý lỗi.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">loadMultipleData</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">user</span>, <span style="color:#a6e22e">posts</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> Promise.<span style="color:#a6e22e">all</span>([
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/api/user&#39;</span>),
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;/api/posts&#39;</span>)
+</span></span><span style="display:flex;"><span>    ]);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Tải xong dữ liệu người dùng và bài viết&#39;</span>);
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#39;Lỗi khi tải dữ liệu:&#39;</span>, <span style="color:#a6e22e">e</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<p><strong>Tổng kết:</strong> <code>async/await</code> là cách tiếp cận hiện đại và hiệu quả để xử lý bất đồng bộ trong JavaScript. Nó giúp code trở nên sáng sủa, dễ hiểu, và ít lỗi hơn.</p>
 
           </article>
         </div>
@@ -559,11 +583,10 @@ Async/Await in JavaScript | Băng Trinh - Developer
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#ví-dụ">Ví dụ</a>
-      <ul>
-        <li><a href="#mẹo">Mẹo</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-tổng-quan-về-asyncawait">1. Tổng quan về Async/Await</a></li>
+    <li><a href="#2-ví-dụ-cơ-bản">2. Ví dụ cơ bản</a></li>
+    <li><a href="#3-ưu-điểm-của-asyncawait">3. Ưu điểm của Async/Await</a></li>
+    <li><a href="#4-một-số-lưu-ý-quan-trọng">4. Một số lưu ý quan trọng</a></li>
   </ul>
 </nav>
               </div>
@@ -770,16 +793,9 @@ Async/Await in JavaScript | Băng Trinh - Developer
                         <h5 class="card-title bg-transparent" title="Functional Programming in Java">Functional Programming in …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Java 8 trở đi hỗ trợ lập trình functional với lambda và streams.</p>
-<h2 id="ví-dụ">Ví dụ</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(1, 2, 3, 4);
-</span></span><span style="display:flex;"><span>numbers.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">map</span>(n <span style="color:#f92672">-&gt;</span> n <span style="color:#f92672">*</span> n)
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="mẹo">Mẹo</h3>
-<ul>
-<li><code>map</code>, <code>filter</code>, <code>reduce</code> là những function quan trọng.</li>
-<li>Giúp code gọn, dễ test và maintain. …</li></ul></p>
+                        <p><p>Lập trình hàm (Functional Programming) trong Java được giới thiệu mạnh mẽ từ Java 8, mở ra cách tiếp cận mới cho việc viết code ngắn gọn, dễ đọc và ít lỗi hơn.</p>
+<h2 id="1-tư-duy-lập-trình-hàm-là-gì">1. Tư duy lập trình hàm là gì?</h2>
+<p>Lập trình hàm tập trung vào việc sử dụng các <strong>hàm không có side effect</strong>, dữ liệu <strong>bất biến (immutable)</strong> và <strong>xử lý …</strong></p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">

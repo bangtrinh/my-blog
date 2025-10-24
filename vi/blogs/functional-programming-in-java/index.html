@@ -525,19 +525,35 @@ Functional Programming in Java | Băng Trinh - Developer
           </div>
           
           <article class="page-content  p-2">
-          <p>Java 8 trở đi hỗ trợ lập trình functional với lambda và streams.</p>
-<h2 id="ví-dụ">Ví dụ</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(1, 2, 3, 4);
-</span></span><span style="display:flex;"><span>numbers.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">map</span>(n <span style="color:#f92672">-&gt;</span> n <span style="color:#f92672">*</span> n)
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="mẹo">Mẹo</h3>
-<ul>
-<li><code>map</code>, <code>filter</code>, <code>reduce</code> là những function quan trọng.</li>
-<li>Giúp code gọn, dễ test và maintain.</li>
+          <p>Lập trình hàm (Functional Programming) trong Java được giới thiệu mạnh mẽ từ Java 8, mở ra cách tiếp cận mới cho việc viết code ngắn gọn, dễ đọc và ít lỗi hơn.</p>
+<h2 id="1-tư-duy-lập-trình-hàm-là-gì">1. Tư duy lập trình hàm là gì?</h2>
+<p>Lập trình hàm tập trung vào việc sử dụng các <strong>hàm không có side effect</strong>, dữ liệu <strong>bất biến (immutable)</strong> và <strong>xử lý dữ liệu bằng hàm thuần túy (pure functions)</strong>.</p>
+<h2 id="2-lambda-expressions-trong-java">2. Lambda Expressions trong Java</h2>
+<p>Lambda là cú pháp rút gọn để biểu diễn các biểu thức hàm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> names <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(<span style="color:#e6db74">&#34;An&#34;</span>, <span style="color:#e6db74">&#34;Bình&#34;</span>, <span style="color:#e6db74">&#34;Chi&#34;</span>);
+</span></span><span style="display:flex;"><span>names.<span style="color:#a6e22e">forEach</span>(name <span style="color:#f92672">-&gt;</span> System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Xin chào &#34;</span> <span style="color:#f92672">+</span> name));
+</span></span></code></pre></div><ul>
+<li><code>name -&gt;</code> là phần định nghĩa đầu vào.</li>
+<li><code>System.out.println(...)</code> là phần thực thi.</li>
 </ul>
-<!-- raw HTML omitted -->
-<p><strong>N.B.</strong> Functional programming trong Java giúp code modular và readable.</p>
+<h2 id="3-stream-api--linh-hồn-của-functional-java">3. Stream API – Linh hồn của Functional Java</h2>
+<p>Stream API giúp xử lý dữ liệu theo chuỗi thao tác như filter, map, reduce…</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(1, 2, 3, 4, 5);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> numbers.<span style="color:#a6e22e">stream</span>()
+</span></span><span style="display:flex;"><span>                 .<span style="color:#a6e22e">filter</span>(n <span style="color:#f92672">-&gt;</span> n <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0)
+</span></span><span style="display:flex;"><span>                 .<span style="color:#a6e22e">mapToInt</span>(n <span style="color:#f92672">-&gt;</span> n <span style="color:#f92672">*</span> n)
+</span></span><span style="display:flex;"><span>                 .<span style="color:#a6e22e">sum</span>();
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Tổng bình phương các số chẵn: &#34;</span> <span style="color:#f92672">+</span> sum);
+</span></span></code></pre></div><h2 id="4-ưu-điểm-của-functional-programming">4. Ưu điểm của Functional Programming</h2>
+<ul>
+<li>Dễ song song hóa (parallel processing).</li>
+<li>Dễ bảo trì và kiểm thử.</li>
+<li>Code ngắn gọn, ít lỗi hơn.</li>
+</ul>
+<h2 id="5-khi-nào-nên-dùng">5. Khi nào nên dùng?</h2>
+<p>Functional programming rất phù hợp khi xử lý <strong>tập dữ liệu lớn</strong>, hoặc cần <strong>biến đổi dữ liệu liên tục</strong> (data transformation). Tuy nhiên, không nên lạm dụng trong các đoạn code yêu cầu thay đổi trạng thái.</p>
+<hr>
+<p><strong>Kết luận:</strong> Java Functional Programming không chỉ giúp code ngắn gọn hơn mà còn giúp phát triển ứng dụng hiện đại, linh hoạt và hiệu quả hơn.</p>
 
           </article>
         </div>
@@ -552,11 +568,11 @@ Functional Programming in Java | Băng Trinh - Developer
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#ví-dụ">Ví dụ</a>
-      <ul>
-        <li><a href="#mẹo">Mẹo</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-tư-duy-lập-trình-hàm-là-gì">1. Tư duy lập trình hàm là gì?</a></li>
+    <li><a href="#2-lambda-expressions-trong-java">2. Lambda Expressions trong Java</a></li>
+    <li><a href="#3-stream-api--linh-hồn-của-functional-java">3. Stream API – Linh hồn của Functional Java</a></li>
+    <li><a href="#4-ưu-điểm-của-functional-programming">4. Ưu điểm của Functional Programming</a></li>
+    <li><a href="#5-khi-nào-nên-dùng">5. Khi nào nên dùng?</a></li>
   </ul>
 </nav>
               </div>
@@ -763,16 +779,9 @@ Functional Programming in Java | Băng Trinh - Developer
                         <h5 class="card-title bg-transparent" title="Functional Programming in Java">Functional Programming in …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Java 8 trở đi hỗ trợ lập trình functional với lambda và streams.</p>
-<h2 id="ví-dụ">Ví dụ</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(1, 2, 3, 4);
-</span></span><span style="display:flex;"><span>numbers.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">map</span>(n <span style="color:#f92672">-&gt;</span> n <span style="color:#f92672">*</span> n)
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="mẹo">Mẹo</h3>
-<ul>
-<li><code>map</code>, <code>filter</code>, <code>reduce</code> là những function quan trọng.</li>
-<li>Giúp code gọn, dễ test và maintain. …</li></ul></p>
+                        <p><p>Lập trình hàm (Functional Programming) trong Java được giới thiệu mạnh mẽ từ Java 8, mở ra cách tiếp cận mới cho việc viết code ngắn gọn, dễ đọc và ít lỗi hơn.</p>
+<h2 id="1-tư-duy-lập-trình-hàm-là-gì">1. Tư duy lập trình hàm là gì?</h2>
+<p>Lập trình hàm tập trung vào việc sử dụng các <strong>hàm không có side effect</strong>, dữ liệu <strong>bất biến (immutable)</strong> và <strong>xử lý …</strong></p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">

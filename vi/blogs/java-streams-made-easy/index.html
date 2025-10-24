@@ -525,21 +525,55 @@ Java Streams Made Easy | Băng Trinh - Developer
           </div>
           
           <article class="page-content  p-2">
-          <p>Java Streams giúp bạn thao tác trên collections một cách dễ dàng và hiệu quả.</p>
-<h2 id="stream-basics">Stream Basics</h2>
-<p>Bạn có thể tạo Stream từ List, Set, hoặc Arrays:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> names <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>);
+          <p>Stream API là một trong những tính năng nổi bật của Java 8, giúp thao tác dữ liệu dễ dàng, hiệu quả và theo phong cách functional.</p>
+<h2 id="1-stream-là-gì">1. Stream là gì?</h2>
+<p>Stream là chuỗi các phần tử dữ liệu hỗ trợ nhiều phép biến đổi (transformation) và tổng hợp (aggregation) mà không cần thay đổi cấu trúc dữ liệu gốc.</p>
+<h2 id="2-cách-tạo-stream">2. Cách tạo Stream</h2>
+<p>Bạn có thể tạo Stream từ các nguồn dữ liệu như Collection, Array, hoặc I/O channel.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> names <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(<span style="color:#e6db74">&#34;Alice&#34;</span>, <span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#e6db74">&#34;Anna&#34;</span>);
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>names.<span style="color:#a6e22e">stream</span>()
 </span></span><span style="display:flex;"><span>     .<span style="color:#a6e22e">filter</span>(name <span style="color:#f92672">-&gt;</span> name.<span style="color:#a6e22e">startsWith</span>(<span style="color:#e6db74">&#34;A&#34;</span>))
+</span></span><span style="display:flex;"><span>     .<span style="color:#a6e22e">map</span>(String::toUpperCase)
+</span></span><span style="display:flex;"><span>     .<span style="color:#a6e22e">sorted</span>()
 </span></span><span style="display:flex;"><span>     .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="mẹo">Mẹo</h3>
-<ul>
-<li><code>map()</code> để biến đổi dữ liệu.</li>
-<li><code>filter()</code> để lọc.</li>
-<li><code>collect()</code> để gom kết quả lại.</li>
-</ul>
-<!-- raw HTML omitted -->
-<p><strong>N.B.</strong> Streams giúp viết code ngắn gọn, nhưng hãy nhớ lazy evaluation và tránh side-effect.</p>
+</span></span></code></pre></div><h2 id="3-các-thao-tác-phổ-biến-trong-stream">3. Các thao tác phổ biến trong Stream</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Phương thức</th>
+          <th>Mô tả</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>filter()</code></td>
+          <td>Lọc phần tử theo điều kiện</td>
+      </tr>
+      <tr>
+          <td><code>map()</code></td>
+          <td>Biến đổi dữ liệu</td>
+      </tr>
+      <tr>
+          <td><code>sorted()</code></td>
+          <td>Sắp xếp</td>
+      </tr>
+      <tr>
+          <td><code>collect()</code></td>
+          <td>Gom kết quả về Collection hoặc giá trị</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="4-lazy-evaluation-và-performance">4. Lazy Evaluation và Performance</h2>
+<p>Stream sử dụng <strong>lazy evaluation</strong>, nghĩa là chỉ khi bạn gọi các thao tác terminal như <code>forEach</code>, <code>collect</code>, hoặc <code>count</code> thì luồng dữ liệu mới thực sự được xử lý.</p>
+<h2 id="5-parallel-streams">5. Parallel Streams</h2>
+<p>Java hỗ trợ <code>parallelStream()</code> để tận dụng đa luồng, giúp tăng tốc độ xử lý với dữ liệu lớn.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">long</span> count <span style="color:#f92672">=</span> names.<span style="color:#a6e22e">parallelStream</span>()
+</span></span><span style="display:flex;"><span>                  .<span style="color:#a6e22e">filter</span>(n <span style="color:#f92672">-&gt;</span> n.<span style="color:#a6e22e">length</span>() <span style="color:#f92672">&gt;</span> 3)
+</span></span><span style="display:flex;"><span>                  .<span style="color:#a6e22e">count</span>();
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Số tên dài hơn 3 ký tự: &#34;</span> <span style="color:#f92672">+</span> count);
+</span></span></code></pre></div><hr>
+<p><strong>Kết luận:</strong> Sử dụng Stream giúp viết code Java hiện đại, dễ hiểu và mang lại hiệu suất cao, đặc biệt trong các tác vụ xử lý dữ liệu phức tạp.</p>
 
           </article>
         </div>
@@ -554,11 +588,11 @@ Java Streams Made Easy | Băng Trinh - Developer
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#stream-basics">Stream Basics</a>
-      <ul>
-        <li><a href="#mẹo">Mẹo</a></li>
-      </ul>
-    </li>
+    <li><a href="#1-stream-là-gì">1. Stream là gì?</a></li>
+    <li><a href="#2-cách-tạo-stream">2. Cách tạo Stream</a></li>
+    <li><a href="#3-các-thao-tác-phổ-biến-trong-stream">3. Các thao tác phổ biến trong Stream</a></li>
+    <li><a href="#4-lazy-evaluation-và-performance">4. Lazy Evaluation và Performance</a></li>
+    <li><a href="#5-parallel-streams">5. Parallel Streams</a></li>
   </ul>
 </nav>
               </div>
@@ -765,16 +799,9 @@ Java Streams Made Easy | Băng Trinh - Developer
                         <h5 class="card-title bg-transparent" title="Functional Programming in Java">Functional Programming in …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>Java 8 trở đi hỗ trợ lập trình functional với lambda và streams.</p>
-<h2 id="ví-dụ">Ví dụ</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> numbers <span style="color:#f92672">=</span> Arrays.<span style="color:#a6e22e">asList</span>(1, 2, 3, 4);
-</span></span><span style="display:flex;"><span>numbers.<span style="color:#a6e22e">stream</span>()
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">map</span>(n <span style="color:#f92672">-&gt;</span> n <span style="color:#f92672">*</span> n)
-</span></span><span style="display:flex;"><span>       .<span style="color:#a6e22e">forEach</span>(System.<span style="color:#a6e22e">out</span>::println);
-</span></span></code></pre></div><h3 id="mẹo">Mẹo</h3>
-<ul>
-<li><code>map</code>, <code>filter</code>, <code>reduce</code> là những function quan trọng.</li>
-<li>Giúp code gọn, dễ test và maintain. …</li></ul></p>
+                        <p><p>Lập trình hàm (Functional Programming) trong Java được giới thiệu mạnh mẽ từ Java 8, mở ra cách tiếp cận mới cho việc viết code ngắn gọn, dễ đọc và ít lỗi hơn.</p>
+<h2 id="1-tư-duy-lập-trình-hàm-là-gì">1. Tư duy lập trình hàm là gì?</h2>
+<p>Lập trình hàm tập trung vào việc sử dụng các <strong>hàm không có side effect</strong>, dữ liệu <strong>bất biến (immutable)</strong> và <strong>xử lý …</strong></p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
